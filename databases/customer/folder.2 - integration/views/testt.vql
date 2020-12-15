@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE VIEW testt FOLDER = '/2 - integration' AS SELECT bv_ho_order_item.order_id AS order_id, bv_ho_order_item.product_id AS product_id, bv_ho_orders.id AS id, bv_ho_orders.customer_code AS customer_code, bv_ho_orders.status AS status, bv_ho_orders.dateplaced AS dateplaced, bv_ho_orders.datedelivered AS datedelivered, bv_ho_orders.dateclosed AS dateclosed FROM bv_ho_order_item AS bv_ho_order_item INNER JOIN bv_ho_orders AS bv_ho_orders ON bv_ho_order_item.id = bv_ho_orders.id ;
+
+ALTER VIEW testt
+ LAYOUT (bv_ho_order_item = [189, 101, 200, 85], bv_ho_orders = [713, 89, 200, 145]);
+
